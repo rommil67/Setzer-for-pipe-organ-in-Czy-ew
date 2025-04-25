@@ -254,6 +254,7 @@ void MyHandleNoteOn(byte channel, byte pitch, byte velocity) {
 {
    if (pitch == 88) {
     digitalWrite(CrescendoPin, LOW); // Włączenie crescendo (C)
+    MIDI.sendNoteOn(88, 127, 13); // komunikat midiOn na 13 kanale dla włączenia LED pistons Cresc (R)
     crescTouche = true; // dopuki trzymamy przycisk C ta flaga jest true
     if (digitalRead(SetPin) == HIGH)
     storeBAS_channel_1 = BAS_channel_1;
