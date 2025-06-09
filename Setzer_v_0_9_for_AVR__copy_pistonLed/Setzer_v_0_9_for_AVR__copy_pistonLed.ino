@@ -19,7 +19,7 @@
 #define BACKLIGHT_PIN 3
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 //LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7);
-Encoder encoder(3,2); // Podłącz enkoder do pinów 2 i 3 w UNO and Atmega32A -Bobuinopin // Atmega644P - standard pin do pin 10 i 11
+Encoder encoder(10,11); // Podłącz enkoder do pinów 2 i 3 w UNO and Atmega32A -Bobuinopin // mMega and Mega2560 pro and Atmega644P - standard pin do pin 10 i 11
 const int chipSelect = 53; // 53 for Mega, 10 olways AVR
 File dataFile;
 int displayNrComb = 1; // Zmienna nrBank używana tylko do wyświetlania
